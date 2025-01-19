@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: "Noto Sans KR", sans-serif;
+    background-color: #2C3E50;
+    color: white;
+    transition: margin-left 0.5s;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: #2C3E50;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.logo {
+    margin-left: 20px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2C3E50;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-right: 2px solid #565F68;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    margin: 0;
+    border-radius: 0;
+}
+
+/* Hover effect on sidebar */
+.sidebar a:hover {
+    background-color: #34495E;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.sidebar a.closebtn:hover {
+    background-color: inherit;
+    margin: 0;
+    border-radius: 0;
+}
+
+/* Submenu links */
+.submenu a {
+    padding-left: 30px;
+    font-size: 20px;
+    margin: 0;
+}
+
+.submenu a:hover {
+    background-color: #34495E;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+/* Close Button */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+/* Submenu hidden */
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+/* Submenu visible */
+.submenu[data-visible="true"] {
+    max-height: 300px;
+}
+
+/* Main Content */
+.content {
+    margin-left: 30px;
+    padding: 20px;
+}
+
+body.sidebar-open {
+    margin-left: 250px;
+}
+
+.arrow {
+    float: right;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+    margin-left: 10px;
+}
+
+.submenu[data-visible="true"] + .arrow {
+    transform: rotate(90deg);
+}

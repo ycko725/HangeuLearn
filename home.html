@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HangeuLearn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="noto-sans-kr-global">
+    <div class="top-bar">
+        <div id="menu-icon" class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <img src="HangeuLearn.jpg" alt="HangeuLearn Logo" class="logo" onclick="goHome()">
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+        <a href="/home">Home</a>
+        <a href="javascript:void(0)" onclick="toggleSubmenu('learn-submenu', 'learn-arrow')">Learn 
+            <i id="learn-arrow" class="fas fa-chevron-down arrow"></i>
+        </a>
+        <div id="learn-submenu" class="submenu" data-visible="false">
+            <a href="/vowel">Vowel</a>
+            <a href="/consonant">Consonant</a>
+        </div>
+        <a href="javascript:void(0)" onclick="toggleSubmenu('reading-submenu', 'reading-arrow')">Reading 
+            <i id="reading-arrow" class="fas fa-chevron-down arrow"></i>
+        </a>
+        <div id="reading-submenu" class="submenu" data-visible="false">
+            <a href="/topik1">TOPIK 1</a>
+            <a href="/topik2">TOPIK 2</a>
+            <a href="/topik3">TOPIK 3</a>
+            <a href="/topik4">TOPIK 4</a>
+            <a href="/topik5">TOPIK 5</a>
+            <a href="/topik6">TOPIK 6</a>
+        </div>
+        <a href="javascript:void(0)" onclick="toggleSubmenu('vocabulary-submenu', 'vocabulary-arrow')">Vocabulary 
+            <i id="vocabulary-arrow" class="fas fa-chevron-down arrow"></i>
+        </a>
+        <div id="vocabulary-submenu" class="submenu" data-visible="false">
+            <a href="/topik1">TOPIK 1</a>
+            <a href="/topik2">TOPIK 2</a>
+            <a href="/topik3">TOPIK 3</a>
+            <a href="/topik4">TOPIK 4</a>
+            <a href="/topik5">TOPIK 5</a>
+            <a href="/topik6">TOPIK 6</a>
+        </div>
+        <a href="/table">Table</a>
+    </div>
+
+    <div class="content">
+        <h1>Welcome to HangeuLearn!</h1>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
